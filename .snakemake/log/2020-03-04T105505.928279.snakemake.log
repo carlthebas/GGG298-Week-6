@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	KingRule
+	1
+
+[Wed Mar  4 10:55:05 2020]
+rule KingRule:
+    output: 1.fa.gz, 2.fa.gz, 3.fa.gz, 4.fa.gz, 5.fa.gz
+    jobid: 0
+
+[Wed Mar  4 10:55:06 2020]
+Error in rule KingRule:
+    jobid: 0
+    output: 1.fa.gz, 2.fa.gz, 3.fa.gz, 4.fa.gz, 5.fa.gz
+    shell:
+        wget https://osf.io/t5bu6/download -O 1.fa.gz  
+wget https://osf.io/ztqx3/download -O 2.fa.gz
+wget https://osf.io/w4ber/download -O 3.fa.gz
+wget https://osf.io/dnyzp/download -O 4.fa.gz
+wget https://osf.io/ajvqk/download -O 5.fa.gz
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/carlbasbas/GGG298-Week-6/.snakemake/log/2020-03-04T105505.928279.snakemake.log

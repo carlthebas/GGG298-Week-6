@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	All
+	1	Plot
+	2
+
+[Wed Mar  4 11:35:39 2020]
+rule Plot:
+    input: all.cmp
+    output: all.cmp.labels.txt, all.cmp.hist.png, all.cmp.dendro.png, all.cmp.matrix.png
+    jobid: 3
+
+[Wed Mar  4 11:36:19 2020]
+Error in rule Plot:
+    jobid: 3
+    output: all.cmp.labels.txt, all.cmp.hist.png, all.cmp.dendro.png, all.cmp.matrix.png
+    shell:
+        sourmash plot --labels all.cmp
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /Users/carlbasbas/GGG298-Week-6/.snakemake/log/2020-03-04T113539.858088.snakemake.log

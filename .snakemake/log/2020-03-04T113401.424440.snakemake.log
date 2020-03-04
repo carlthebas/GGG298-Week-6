@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	All
+	1	Compare
+	2
+
+[Wed Mar  4 11:34:01 2020]
+rule Compare:
+    input: 1.fa.gz.sig, 2.fa.gz.sig, 3.fa.gz.sig, 4.fa.gz.sig, 5.fa.gz.sig
+    output: all.cmp
+    jobid: 2
+
+[Wed Mar  4 11:34:02 2020]
+Finished job 2.
+1 of 2 steps (50%) done
+
+[Wed Mar  4 11:34:02 2020]
+localrule All:
+    input: 1.fa.gz.sig, all.cmp
+    jobid: 0
+
+[Wed Mar  4 11:34:02 2020]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /Users/carlbasbas/GGG298-Week-6/.snakemake/log/2020-03-04T113401.424440.snakemake.log
